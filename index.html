@@ -17,12 +17,17 @@
   <p>Aqui vai o resultado</p>
   <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
   <div>Clique em mim</div>
+  <button>Teste</button>
   
   <script>
     var p1 = document.getElementsByTagName('p')[0]
     p1.style.color = 'blue'
     document.write(p1.innerText)
 
+    var button = document.querySelector('button')
+    button.style.color = 'blue'
+    button.style.padding = '56px'
+    button.style.fontSize = '40px'
   </script>
 </body>
 </html>
