@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  Digite de qual pais voce eh <input type="text" name="country" id="country">
+  <input type="button" value="Enviar" id="button" onclick="verifica()">
+  <div id="res"></div>
+
+
+  <script>
+
+    function verifica(){
+      var country = document.getElementById('country')
+      var res = document.getElementById('res')
+      var texto = String(country.value)
+      if (texto === 'brasil'){
+        res.innerHTML = 'Ah , tu eh brazuca poh '
+      }else{
+        res.innerHTML = 'Voce nao eh brasileiro neh ? '
+      }
+    }
+    
+  </script>
+</body>
+</html>
