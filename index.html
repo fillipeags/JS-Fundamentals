@@ -18,6 +18,13 @@
   <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
   <div>Clique em mim</div>
   <button>Teste</button>
+
+
+  <input type="number" name="txt1" id="txt1">
+  <input type="number" name="txt2" id="txt2">
+  <input type="button" value="somar" onclick="somar()">
+  <div id="res">Resultado:: </div>
+  
   
   <script>
     var p1 = document.getElementsByTagName('p')[0]
@@ -28,6 +35,39 @@
     button.style.color = 'blue'
     button.style.padding = '56px'
     button.style.fontSize = '40px'
+
+
+    button.addEventListener('click', clicar)
+    button.addEventListener('mouseenter', entrou)
+    button.addEventListener('mouseout', sair)
+    function clicar(){
+      button.innerHTML = 'Clicou'
+      button.style.background = 'red'
+      
+    }
+
+    function sair(){
+      button.innerHTML = 'Saiu pq ?'
+      button.style.background = 'white'
+    }
+    
+    function entrou(){
+      button.innerHTML = 'Entrou!!'
+      button.style.background = 'green'
+    }
+
+
+    function somar(){
+      var txt1 = document.getElementById('txt1')
+      var txt2 = document.getElementById('txt2')
+      var res = document.getElementById('res')
+      
+      var n1 = Number(txt1.value)
+      var n2 = Number(txt2.value)
+      var sum = n1 + n2
+      res.innerText = `A soma entre ${n1} e ${n2} = ${sum}`
+
+    }
   </script>
 </body>
 </html>
