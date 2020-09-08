@@ -7,28 +7,33 @@
   <link rel="stylesheet" href="styles.css">
    
 </head>
+
 <body>
   <header>
-    <h1>Titulo</h1>
+    <h1>Verify Age+Sex</h1>
   </header>
   
   <section>
     <div>
-      Ano de Nascimento <input type="number" name="Ano Nascimento" id="nas">
+      <label>Ano de Nascimento <input type="number" name="nas" id="nas"></label>
+    
       </br>
-      Sexo: 
-      Masculino<input type="radio" name="radsex" id="m" >
-      Feminino<input type="radio" name="radsex" id="f">
-      <input type="button" value="submit" onclick="verifica()">
+      <div class="checkbox">Sexo:
+        <label>Masculino <input type="radio" name="radsex" id="M" ></label>
+        <label>Feminino <input type="radio" name="radsex" id="F" ></label>
+      </div>   
+      </br>
+      <input id="button" type="button" value="submit" onclick="verify()">
     </div>
+
     <div>
       <p id="res"></p>
     </div>
+
+    
+    
   </section>
-  
-  <footer>
-    <p>&copy; Curso em Video</p>
-  </footer>
+
 
   <script src="script.js"></script>
 </body>

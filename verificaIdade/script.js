@@ -1,21 +1,17 @@
-function verifica(){
-  var nasc = document.getElementById("nas")
-
+function verify(){
+  var birthYear = document.getElementById("nas")
   var res = document.getElementById("res")
   var sex = document.getElementsByName("radsex")
-
   var submit = document.getElementById("submit")
 
-  anoNasc = Number(nas.value)
-  birthYear = (2020 - anoNasc)
+  var currentYear = new Date().getFullYear()
 
+  age = (currentYear - Number(birthYear.value))
 
+  var gender = ''
+
+  sex[0].checked ? gender = 'Man' : gender = 'Woman'
+
+  res.innerHTML = `You are a ${gender} and have ${age} years`
   
-  if(sex[0].checked){
-    res.innerHTML = `Voce eh homem e tem ${birthYear} anos`
-  }else if(sex[1].checked){
-    res.innerHTML = `Voce eh mulher e tem ${birthYear} anos`
-  }
-
-
 }
