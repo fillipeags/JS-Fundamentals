@@ -1,13 +1,27 @@
 function count(){
-  var inicio = document.getElementById('inicio')
+  let inicio = document.getElementById('inicio')
+  let fim = document.getElementById('fim')
+  let passo = document.getElementById('passo')
+  let res = document.getElementById('result')
 
-  var submit = document.getElementById('button')
-  var res = document.getElementById('result')
+  if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+    alert('Dados faltando')
+  }else{
+    res.innerHTML = 'Contando: '
+    let init = Number(inicio.value)
+    let end = Number(fim.value)
+    let pas = Number(passo.value)
 
-  var valor = parseInt(inicio)
-  res.innerHTML = `${valor}`
-  
+    if(init < end){
+      for(let c = init; c <= end; c += pas){
+        res.innerHTML += ` ➡️ ${c}  `
+      }
+    }else{
+      for(let c = init; c >= end; c -= pas){
+        res.innerHTML += ` ⬅️ ${c}  `
+      }
 
-
-
+    }
+    res.innerHTML += `🛑`
+  }
 }
